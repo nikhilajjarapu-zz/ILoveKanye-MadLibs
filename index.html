@@ -27,7 +27,7 @@ function changeLyrics()
 {
 	var element = document.getElementById('lyrics');
 	var text = element.innerText || element.textContent;
-	text = text.split(document.getElementById('currentname')).join(document.getElementById('name').value);
+	text = text.split(document.getElementById('currentname').innerText).join(document.getElementById('name').value);
 	document.getElementById('lyrics').innerText = text;
 	document.getElementById('currentname').innerText = document.getElementById('name').value;
 }
