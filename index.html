@@ -27,8 +27,9 @@ function changeLyrics()
 {
 	var element = document.getElementById('lyrics');
 	var text = element.innerText || element.textContent;
-	text = text.replace(/Kanye/g, document.getElementById('name').value)
+	text = text.split(document.getElementById('currentname')).join(document.getElementById('name').value);
 	document.getElementById('lyrics').innerText = text;
+	document.getElementById('currentname').innerText = document.getElementById('name').value;
 }
 </script>
 </head>
@@ -59,6 +60,6 @@ Called "I Miss The Old Kanye," man that would be so Kanye  <br>
 That's all it was Kanye, we still love Kanye  <br>
 And I love you like Kanye loves Kanye 
 </p>
-
+<p id="currentname" hidden>Kanye</p>
 </body>
 </html>
